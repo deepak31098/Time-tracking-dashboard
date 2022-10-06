@@ -17,6 +17,7 @@
 
 .activity-box:hover{
   filter: brightness(120%);
+  cursor: pointer;
 }
 .activity-name{
   background-image: url(../public/images/icon-ellipsis.svg);
@@ -44,7 +45,7 @@
 
 /*For Person component*/
 .main-person-box{
-  color: hsl(235, 45%, 61%);
+  color:  hsl(235, 45%, 61%);
   border-radius: 10px;
   background-color: hsl(235, 46%, 20%);
   grid-row: 1/3;
@@ -62,7 +63,7 @@
 }
 
 .person-info{
-  background-color: hsl(235, 45%, 61%);
+  background-color:hsl(246, 80%, 60%);
   padding: 20px;
   border-radius: 10px;
 }
@@ -93,20 +94,22 @@
 
 .daily:hover{
   color:white;
+  cursor: pointer;
 }
 
 .weekly:hover{
   color:white;
+  cursor: pointer;
 }
 
 .monthly:hover{
   color:white;
+  cursor: pointer;
 }
 
 /* App style */
 .app{
   display: grid;
-  /* width: 60vw; */
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 25px;
   margin: 0 4%;
@@ -119,4 +122,68 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (min-width:600px) and (max-width:850px) {
+  .app{  
+    grid-template-columns: repeat(2, 1fr);
+    margin:10% 0;
+  }
+
+  .wrapper{
+    min-width: 100%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+.person-image{
+  margin-right: 20px;
+  float: left;
+  padding: 0;
+
+}
+
+.person-info{
+  padding: 20px 20px 30px 20px;
+}
+.person-name{
+  width: 100%;;
+  padding:0;
+  font-size: 24px;
+}
+
+.app{  
+  grid-template-columns: repeat(1, 1fr);
+  margin:12% 20px;
+}
+
+.wrapper{
+  align-items: stretch;
+  min-width: 100%;
+  }
+
+.hours{
+  display: inline-block;
+  padding:0;
+}
+
+.last-week-hours{
+  display: inline-block;
+  position: absolute;
+  right: 25px;
+  font-size: 12px;
+  bottom: 35px;
+}
+
+.activity-box{
+  position: relative;
+}
+
+.time-interval {
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35px;
+  }
 }

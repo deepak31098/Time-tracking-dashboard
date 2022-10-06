@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+//not able to understand how component in devtool works
 import Activity from "./Activity";
 import Person from "./Person";
 //  import activities from "data.json";//search on internet that how use axios to fetch data i tried it

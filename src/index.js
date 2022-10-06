@@ -10,3 +10,6 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+//designed for response then also chrome response check isn't displaying that way
+//check by reducing screen size manually
