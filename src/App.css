@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+/*For Activity component*/
+.main-box{
+  padding-top: 30px;
+  border-radius: 10px;
+  background-image: url(../public/images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position:  right 15px top -5px ;
+  background-color: hsl(15, 100%, 70%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.activity-box{
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.activity-box:hover{
+  filter: brightness(120%);
+}
+.activity-name{
+  background-image: url(../public/images/icon-ellipsis.svg);
+  background-repeat: no-repeat;
+  background-position:  right 8px center ;
+  background-size: 15px;
+  color: white;
+  padding: 5px 0;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hours{
+  font-size: 38px;
+  color: white;
+  font-weight: 300;
+  padding-top: 15px;
+}
+
+.last-week-hours{
+  color: hsl(236, 100%, 87%);
+  font-size: 11px;;
+  padding: 5px 0 10px 0;
+}
+
+/*For Person component*/
+.main-person-box{
+  color: hsl(235, 45%, 61%);
+  border-radius: 10px;
+  background-color: hsl(235, 46%, 20%);
+  grid-row: 1/3;
+}
+
+.person-image{
+  width: 55px;
+  padding-bottom: 20px;
+}
+
+.jeremy{
+  width: 50px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.person-info{
+  background-color: hsl(235, 45%, 61%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.person-name{
+  font-size: 28px;
+  width: 60%;
+  color: white;
+  font-weight: 300;
+  padding-bottom: 35px;
+}
+
+.reported-by-line{
+  font-size: 11px;
+  color: hsl(236, 100%, 87%);
+  padding-bottom: 2px;
+}
+
+.time-interval{
+  font-size: 12px;
+  padding: 30px 20px;
+  font-weight: 300;
+}
+
+.weekly{
+  margin: 25px 0;
+}
+
+.daily:hover{
+  color:white;
+}
+
+.weekly:hover{
+  color:white;
+}
+
+.monthly:hover{
+  color:white;
+}
+
+/* App style */
+.app{
+  display: grid;
+  /* width: 60vw; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  margin: 0 4%;
+}
+
+.wrapper{
   display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
