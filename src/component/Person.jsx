@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import '../App.css';
-//const and var all are behaving in same manner why
-var dailystyle,weeklystyle,monthlystyle;
-function style(trigger){
-     dailystyle= trigger==="Daily"? {color:"white"}:{color:"hsl(235, 45%, 61%)"};
-     weeklystyle= trigger==="Weekly"? {color:"white"}:{color:"hsl(235, 45%, 61%)"};
-     monthlystyle= trigger==="Monthly"? {color:"white"}:{color:"hsl(235, 45%, 61%)"};
-}
+
 function Person(prop){
+    const[style, setStyle] = useState({
+        "Weekly":true,
+        "Daily":false,
+        "Monthly":false
+    });
+
     function handleClick(e){
-        style(e.currentTarget.innerText)
+        setStyle({
+                "Weekly":false,
+                "Daily":false,
+                "Monthly":false,
+                [e.currentTarget.innerText]:true
+            });
+            
         prop.trigger(e.currentTarget.innerText)
     }
+
     return(
             <div className="main-person-box">
                 <div className="person-info">
@@ -20,9 +27,9 @@ function Person(prop){
                     <div className="person-name"><span>Jeremy Robson</span></div>
                 </div>
                 <div  className="time-interval">
-                    <div onClick={handleClick} style={dailystyle} className="daily"><span>Daily</span></div>
-                    <div onClick={handleClick} style={weeklystyle} className="weekly"><span>Weekly</span></div>
-                    <div onClick={handleClick} style={monthlystyle} className="monthly"><span>Monthly</span></div>
+                    <div onClick={handleClick} style={{color : style.Daily ? "white" :"hsl(235, 45%, 61%)"}} className="daily"><span>Daily</span></div>
+                    <div onClick={handleClick} style={{color : style.Weekly ? "white" :"hsl(235, 45%, 61%)"}} className="weekly"><span>Weekly</span></div>
+                    <div onClick={handleClick} style={{color : style.Monthly ? "white" :"hsl(235, 45%, 61%)"}} className="monthly"><span>Monthly</span></div>
                 </div>
             </div>
     )
