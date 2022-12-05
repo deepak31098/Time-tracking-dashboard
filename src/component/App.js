@@ -7,7 +7,7 @@ function App() {
   const [data, setData]=useState([])
   const [time,setTime]= useState("weekly");
   const style = ["hsl(15, 100%, 70%)","hsl(195, 74%, 62%)","hsl(348, 100%, 68%)","hsl(145, 58%, 55%)","hsl(264, 64%, 52%)","hsl(43, 84%, 65%)"]
-  const image =["work","play","Study","exercise","social","self care"]
+  const image =["work","play","study","exercise","social","self care"]
 
   function states(t){
     setTime(t.toLowerCase());
